@@ -1,6 +1,6 @@
 FROM node:16-alpine as builder
 RUN addgroup app && adduser -S -G app app
-RUN mkdir /app && chown app:app /app
+RUN mkdir /app && chown -R app:app /app
 USER app
 WORKDIR '/app'
 COPY package.json .
